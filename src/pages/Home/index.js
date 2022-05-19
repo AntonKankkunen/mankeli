@@ -1,6 +1,7 @@
 
 import './style.css';
 import { Link } from 'react-router-dom';
+import Test from './components/Test';
 
 export function HomePage() {
   return (

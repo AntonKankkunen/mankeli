@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:#61dafb;
 }
 
 .App-link {
@@ -45,7 +45,7 @@
 .App-line {
   height: 50%;
   width: 2px;
-  background-color: white;
+  background-color: rgb(2, 57, 78);
 }
 
 .App-main {  
@@ -56,5 +56,5 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000000;
 }
