@@ -1,5 +1,5 @@
 
-import Board from './Board';
+import AiBoard from './AiBoard';
 import Info from './Info'
 import "../app.css"
 import "../index1.css"
@@ -22,7 +22,7 @@ export function AIMode() {
                 Reset Board
             </button>
         </div>
-        <Board reset={reset} setReset={setReset} winner={winner} setWinner={setWinner} />
+        <AiBoard reset={reset} setReset={setReset} winner={winner} setWinner={setWinner} />
         <Info />
     </div>
   );
