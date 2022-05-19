@@ -60,7 +60,7 @@ const Board = ({reset, setReset, winner, setWinner}) => {
             for (let i = 0; i < 9; i += 3) {
                 ans |= (data[i] === data[i + 1] && 
                 data[i] === data[i + 2] && 
-                data[i] !== '')
+                data[i] !== '' && data[i] !== undefined)
             }
             return ans;
         }
@@ -71,7 +71,7 @@ const Board = ({reset, setReset, winner, setWinner}) => {
             for (let i = 0; i < 3; i++) {
                 ans |= (data[i] === data[i + 3] && 
                 data[i] === data[i + 6] && 
-                data[i] !== '')
+                data[i] !== '' && data[i] !== undefined)
             }
             return ans;
         }
@@ -79,9 +79,9 @@ const Board = ({reset, setReset, winner, setWinner}) => {
         // Checks for the win condition in diagonals
         const checkDiagonal = () => {
             return ((data[0] === data[4] && 
-            data[0] === data[8] && data[0] !== '') || 
+            data[0] === data[8] && data[0] !== '' && data[0] !== undefined) || 
             (data[2] === data[4] && data[2] === data[6] && 
-            data[2] !== ''));
+            data[2] !== '' && data[2] !== undefined));
         }
   
         // Checks if at all a win condition is present
@@ -92,6 +92,7 @@ const Board = ({reset, setReset, winner, setWinner}) => {
         // Checks for a tie
         const checkTie = () => {
             let count = 0;
+            if (!data) return;
             data.forEach((cell) => {
                 if (cell !== '') {
                     count++;
@@ -102,10 +103,10 @@ const Board = ({reset, setReset, winner, setWinner}) => {
   
         // Setting the winner in case of a win
         if (checkWin()) {
+            console.log("hei")
             setWinner(turn === 0 ? "Player 2 Wins!" : 
             "Player 1 Wins!");
         } else if (checkTie()) {
-  
             // Setting the winner to tie in case of a tie
             setWinner("It's a Tie!");
         }
