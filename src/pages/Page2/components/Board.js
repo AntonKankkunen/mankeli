@@ -114,6 +114,7 @@ const Board = ({reset, setReset, winner, setWinner}) => {
 
 
   return (
+      
         <div ref={boardRef} className="board">
             <div className="input input-1" 
                 onClick={(e) => draw(e, 1)}></div>
