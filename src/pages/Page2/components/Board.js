@@ -103,7 +103,6 @@ const Board = ({reset, setReset, winner, setWinner}) => {
   
         // Setting the winner in case of a win
         if (checkWin()) {
-            console.log("hei")
             setWinner(turn === 0 ? "Player 2 Wins!" : 
             "Player 1 Wins!");
         } else if (checkTie()) {

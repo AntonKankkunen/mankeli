@@ -1,6 +1,6 @@
 
-import Board from '../components/Board';
-import Info from '../components/Info'
+import Board from './Board';
+import Info from './Info'
 import "../app.css"
 import "../index1.css"
 import { Link } from 'react-router-dom';
@@ -16,15 +16,12 @@ export function Humanmode() {
   // the current winner
   const [winner, setWinner] = useState('');
 
-  const [mode, setMode] = useState(false)
-
   // Sets the reset property to true
   // which starts the chain 
   // reaction of resetting the board
   const resetBoard = () => {
       setReset(true);
   }
-
 
   return (
     
@@ -39,7 +36,6 @@ export function Humanmode() {
             the tic-tac-toe board  */}
             <Board reset={reset} setReset={setReset} winner={winner} setWinner={setWinner} />
             <Info />
-            
         </div>
   );
 }
