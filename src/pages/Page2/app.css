@@ -1,7 +1,6 @@
-@import url(
-'https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
-  
-.App1{
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+.App1 {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -12,7 +11,7 @@
     backdrop-filter: 5px;
     background-color: #FFFFFF;
 }
-  
+
 .winner {
     transition: all ease-in .3s;
     display: flex;
@@ -34,23 +33,24 @@
     padding-bottom: 1rem;
     border-radius: 10%;
 }
-  
-.winner-text{
-    padding: .3em 1em .25em;    
+
+.winner-text {
+    padding: .3em 1em .25em;
     font-weight: 600;
     font-size: 2.5rem;
     color: rgb(0, 0, 0);
     font-family: 'Bellefair', serif;
-    position:relative;
+    position: relative;
     text-align: center;
-    line-height:1.3;
+    line-height: 1.3;
 }
-  
+
 .shrink {
     transform: scale(.1);
     opacity: 0;
 }
-button {
+
+.button {
     background-color: #111827;
     border: 1px solid transparent;
     border-radius: .75rem;
@@ -67,27 +67,29 @@ button {
     text-decoration: none #000000 solid;
     text-decoration-thickness: auto;
     transition-duration: .2s;
-    transition-property: background-color, border-color, 
-      color, fill, stroke;
+    transition-property: background-color, border-color,
+        color, fill, stroke;
     transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     width: auto;
 }
-  
-button:hover {
+
+.button:hover {
     background-color: #000000;
 }
-  
-button:focus {
+
+.button:focus {
     box-shadow: none;
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
-  
+
 @media (min-width: 768px) {
-    button {
-    padding: .75rem 1.5rem;
+    .button {
+        padding: .75rem 1.5rem;
     }
-};
+}
+
+;

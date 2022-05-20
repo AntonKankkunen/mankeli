@@ -18,7 +18,7 @@ export function AIMode() {
     <div className="App1">
         <div className={`winner ${winner ? '' : 'shrink'}`}>
             <div className='winner-text'>{winner}</div>
-            <button onClick={() => resetBoard()}>
+            <button className='button' onClick={() => resetBoard()}>
                 Reset Board
             </button>
         </div>

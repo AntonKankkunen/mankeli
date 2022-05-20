@@ -19,7 +19,7 @@ export function PageTwo() {
       <h2>{mode ? "PVP" : "Against AI"}</h2>
       {contents}
       <div>
-        <button onClick={handleModeClick}>Play against AI</button>
+        <button className="button" onClick={handleModeClick}>Play against AI</button>
       </div>
       <p>
         Page 2
