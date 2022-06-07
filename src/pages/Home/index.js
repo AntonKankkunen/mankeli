@@ -13,6 +13,7 @@ export function HomePage() {
   const [consumptionRate, setConsumptionRate] = useState("yearly");
   const [propertyConsumptions, setPropertyConsumptions] = useState([]);
   const [showConsumptionTable, negateShowConsumptionTable] = useState(false);
+  const [ta, setTa] = useState("hei \nhei");
 
   const getProperty = async (e) => {
     console.log(propertyName);
@@ -43,13 +44,15 @@ export function HomePage() {
     setPropertyName(selectedPropertyName);
     negateShowConsumptionTable(!showConsumptionTable);
   }
-
+  const taChange = (e) => {
+    setTa(e.target.value);
+  }
   const showTable = showConsumptionTable ? 
   <PropertyConsumptionTable propertyConsumptions={propertyConsumptions} propertyName={propertyName}/> :
   <PropertyInformationTable properties={properties} getPropertyConsumption={getPropertyConsumption} />
 
   const formGrid = <div style={{width: "50%"}}>
-        <SearchPropertyForm getProperty={getProperty} setPropertyName={setPropertyName} propertyName={propertyName} handleConsumpltionChange={handleConsumpltionChange}/>
+        <SearchPropertyForm taChange={taChange} ta={ta} getProperty={getProperty} setPropertyName={setPropertyName} propertyName={propertyName} handleConsumpltionChange={handleConsumpltionChange}/>
         {showTable}
         </div>
 
